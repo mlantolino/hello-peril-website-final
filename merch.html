@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hello Peril</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/flexboxgrid.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <a href="index.html"><img class="logo" src="./assets/images/hello-peril-logo-2.png" alt="Hello Peril Main Logo" /></a>
+          <div id="MenuIcon" >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <nav id="MainMenu" class="col-xs-12 col-sm-8">
+          <a href="about.html">About</a>
+          <a href="discography.html">Discography</a>
+          <a href="media.html">Media</a>
+          <a class="active" href="merch.html">Merchandise</a>
+          <a href="tour-dates.html">Tour Dates</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="page-banner merch-banner">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="merch-controls">
+            <li data-filter="all">
+              <button class="merch-ctrl-btn active all-icon">All</button>
+            </li>
+            <li data-filter="topwear">
+              <button class="merch-ctrl-btn">
+                <span>Tops</span>
+              </button>
+            </li>
+            <li data-filter="accessories">
+              <button class="merch-ctrl-btn accessories-icon">
+                <span>Accessories</span>
+                <img src="./assets/images/merch/ball-icon.png" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="filtr-container row">
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-hoodie-1.jpg"
+            alt="Hello Peril Unisex Hoodie"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-hoodie-2.jpg"
+            alt="Hello Peril Unisex Hoodie"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-shirt-black.jpg"
+            alt="Hello Peril Shirt Unisex Black"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-shirt-green.jpg"
+            alt="Hello Peril Shirt Unisex Shirt Green"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="topwear" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-tank.jpg"
+            alt="Hellp Peril Womens Tank"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-hat.png"
+            alt="Hello Peril Hat"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-patch.png"
+            alt="Hello Peril Patch"
+          />
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-3 filtr-item --sold-out" data-category="accessories" data-sort="value">
+          <img
+            class="image-responsive"
+            src="./assets/images/merch/merch-tennis-ball.png"
+            alt="Hello Peril Tennis Ball"
+          />
+        </div>
+      </div>
+      <footer>
+    <p>©2019 Hello Peril</p>
+  </footer>
+    </div>
+  </main>
+</body>
+<script src="./assets/javascripts/jquery-3.3.1.min.js"></script>
+<script src="./assets/javascripts/jquery.filterizr.min.js"></script>
+<script src="./assets/javascripts/lodash.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.filtr-container').filterizr({});
+    $('.merch-ctrl-btn').click(function(){
+      if($(this).hasClass('active')){
+        return false;
+      } else {
+        $('.merch-ctrl-btn').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+  });
+</script>
+
+</html>

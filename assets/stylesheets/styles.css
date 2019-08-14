@@ -1,0 +1,489 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-font{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 0px;
+  padding: 0 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo {
+  max-height: 150px;
+  float: left;
+  padding: 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo > a {
+  display: inline-block;
+  height: 100%;
+  line-height: 150px;
+}
+
+nav{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  position: right;
+  z-index: 10;
+}
+
+nav > a {
+  width: 100%;
+  height: 50px;
+  float: right;
+  padding: 5px 10px;
+  color: #FF8C00;
+}
+
+@media (min-width: 736px) {
+  nav{
+    height: 75px;
+    font-size: 0;
+    display: flex !important;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+  nav > a {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 75px;
+    transition: all .25s ease-in-out;
+}
+
+nav > a:hover, nav > a.active{
+  color: #000000;
+}
+
+section{
+  width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+
+.section-title{
+  margin-bottom: 15px;
+  color: #FF8C00;
+}
+
+.image-responsive{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-banner{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.page-banner:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  background-color: rgba(255,255,255, 0.5);
+}
+
+@media (min-width: 1960px){
+  .page-banner{
+    height: 400px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1959px){
+  .page-banner{
+    height: 500px;
+  }
+
+}
+
+@media (min-width: 720px){
+  .page-banner > .banner-title {
+    font-size: 60px;
+  }
+}
+
+hr {
+    display: block;
+    margin-before: 0.5em;
+    margin-after: 0.5em;
+    margin-start: auto;
+    margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: .5px;
+}
+
+
+
+/*
+
+   ABOUT
+
+ */
+
+.about-banner{
+  background: url('../images/banners/sketch.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.history-image{
+  max-width: 250px;
+  float: left;
+  padding-right: 10px;
+}
+
+/*
+
+   TOUR DATES
+
+ */
+
+.tour-dates-banner{
+  background: url('../images/banners/sketch.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+/*
+
+   HOME
+
+ */
+
+.home-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.home-overlay{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.home-overlay:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: .75;
+}
+
+.home-logo {
+  z-index: 2;
+  position: absolute;
+  text-shadow: 2px 0px 15px #666;
+  transition: all .5s ease-in-out;
+}
+
+@media (min-width: 720px){
+  .home-logo{
+    width: 30vw;
+    height: 30vh;
+  }
+
+
+/*
+
+   DISCOGRAPHY
+
+ */
+
+.discography-banner {
+  background: url('../images/banners/sketch.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.album{
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .album {
+    text-align: left;
+  }
+}
+
+.album-cover{
+  max-width: 275px;
+  max-height: 275px;
+  border-radius: 0px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease-in-out;
+}
+
+@media (min-width: 1024px){
+  .album-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.album-cover:hover{
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: 0 75px 175px rgba(0, 0, 0, 0.25);
+}
+
+ul.album-details{
+  position: relative;
+  z-index: 10;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 1024px){
+  ul.album-details {
+    margin-left: 320px;
+  }
+}
+
+.album-title{
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FF8C00;
+}
+
+ul.track-listings{
+  margin-top: 10px;
+  padding: 0;
+}
+
+ul.track-listings > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+span.track-number {
+  margin-right: 10px;
+}
+
+ul-track-listings > li > .track-time {
+  text-align: right;
+}
+
+/*
+
+   MEDIA
+
+ */
+
+.media-banner {
+  background: url('../images/banners/sketch.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.media-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.media-card-wrapper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.media-card{
+  width: 225px;
+  height: 225px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto 25px;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 0;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.media-card > img {
+  width: 100%;
+  height: 100%;
+}
+
+.media-card:hover {
+  width: 250px;
+  height: 250px;
+  z-index: 10;
+  box-shadow: 0 50px 125px rgba(0, 0, 0, 0.2);
+}
+
+.media-list > iframe {
+  margin-bottom: 50px;
+}
+
+/*
+
+   MERCH
+
+ */
+
+.merch-banner {
+  background: url('../images/banners/sketch.jpg') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 25px;
+}
+
+ul.merch-controls {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #efefef;
+}
+
+@media (min-width: 736px){
+  ul.merch-controls {
+    flex-wrap: nowrap;
+  }
+}
+
+ul.merch-controls > li {
+  width: 100%;
+  height: auto;
+  flex-grow: 0;
+  overflow: hidden;
+}
+
+.merch-ctrl-btn {
+	height: auto;
+  flex-grow: 0;
+	width: 100%;
+	line-height: 24px;
+	font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: none;
+	overflow: hidden;
+  background: #efefef;
+  transition: all 0.3s ease-in-out;
+}
+
+.merch-ctrl-btn.active {
+  background: #FFA500;
+}
+
+.merch-ctrl-btn:hover {
+  cursor: pointer;
+  background: #FFA500;
+}
+
+.merch-ctrl-btn span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+  position: relative;
+	transition: all 0.3s;
+}
+
+.merch-ctrl-btn img {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 100%;
+}
+
+.filtr-item {
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index:0;
+  transition: all .3s ease-in-out;
+}
+
+.filtr-item:hover {
+  cursor: pointer;
+  top: .5rem;
+  background: #efefef;
+  z-index:10;
+}
+
+.filtr-item. {
+  content:;
+  width: 20rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.5625rem;
+  right: -105px;
+  padding-top: .25rem;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -25px);
+  z-index: 1;
+  background: rgba(117,0,2, 0.85);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0);
+  transform: rotate(10deg)
+}
+button:focus {
+  outline: 0;
+}
