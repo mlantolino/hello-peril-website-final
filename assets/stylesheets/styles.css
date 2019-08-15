@@ -383,12 +383,7 @@ ul.merch-controls {
   padding: 0;
   list-style: none;
   border: 1px solid #efefef;
-}
 
-@media (min-width: 736px){
-  ul.merch-controls {
-    flex-wrap: nowrap;
-  }
 }
 
 ul.merch-controls > li {
